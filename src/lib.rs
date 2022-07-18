@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-const S: &'static str =
+const S: &str =
 "Gur Mra bs Clguba, ol Gvz Crgref
 Ornhgvshy vf orggre guna htyl.
 Rkcyvpvg vf orggre guna vzcyvpvg.
@@ -24,7 +24,7 @@ Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg'f qb zber bs gubfr!";
 
 pub fn this() -> String {
     let mut d = HashMap::new();
-    for c in vec![65, 97] {
+    for c in &[65, 97] {
         for i in 0..26 {
             d.insert(char::from(i+c), char::from((i+13) % 26 + c));
         }
